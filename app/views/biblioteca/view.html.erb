@@ -1,0 +1,43 @@
+<h3>Elige modo de filtrado:</h3>
+
+<form method="get" action="/biblioteca/view">
+
+    <div class="mb-3">
+        <label for="estado" class="form-label">Estado</label>
+        <select id="estado" name="state" class="form-select" aria-label="Seleccionar estado del libro">
+            <option value="prestado">Prestado</option>
+            <option value="en_estante">En estante</option>
+        </select>
+    </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+
+
+<table class="table table-info">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Título</th>
+            <th scope="col">Autor</th>
+            <th scope="col">Fecha de prestamo</th>
+            <th scope="col">Fecha de devolución</th>
+            <th scope="col">Estado del libro</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @libros.each do |biblioteca| %>
+        <tr>
+        <td><%= biblioteca.id %></td>
+        <td><%= biblioteca.title %></td>
+        <td><%= biblioteca.author %></td>
+        <td><%= biblioteca.first_date %></td>
+        <td><%= biblioteca.second_date %></td>
+        <td><%= biblioteca.state%></td>
+        </tr>  
+        <% end %>
+    </tbody>
+</table>

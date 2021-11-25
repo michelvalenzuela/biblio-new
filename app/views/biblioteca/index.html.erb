@@ -1,0 +1,38 @@
+<body class=container>
+    <h1>Para ver los Libros <a href="/biblioteca/view">haz click aquí</a></h1>
+
+    Ingresa los datos del libros en el siguiente formulario:
+
+    <form method="get" action="/biblioteca/create">
+
+        <div class="mb-3">
+            <label for="titulo" class="form-label">Nombre del libro</label>
+            <input class="form-control" id="titulo" name="title">
+        </div>
+
+        <div class="mb-3">
+            <label for="autor" class="form-label">Nombre del autor</label>
+            <input class="form-control" id="autor" name="author">
+        </div>
+
+        <div class="mb-3">
+            <label for="first_date" class="form-label">Fecha de prestamo</label>
+            <input class="form-control" id="first_date" type="date" name="first_date">
+        </div>
+    
+        <div class="mb-3">
+            <label for="second_date" class="form-label">Fecha de devolución</label>
+            <input class="form-control" id="second_date" type="date" name="second_date">
+        </div>
+
+        <div class="mb-3">
+            <label for="estado" class="form-label">Estado</label>
+            <select id="estado" name="state" class="form-select" aria-label="Seleccionar estado del proyecto">
+                <option value="prestado">Prestado</option>
+                <option value="en_estante">En estante</option>
+            </select>
+        </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
